@@ -1,0 +1,6 @@
+  cd vue3-project2
+  npm install
+  npm run format
+  npm run dev
+
+  http://localhost:5173/
