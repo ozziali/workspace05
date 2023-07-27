@@ -10,6 +10,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vueuse/motion": "^2.0.0",
     "popmotion": "^11.0.5",
     "vue": "^3.3.4"
   },
