@@ -1,12 +1,15 @@
 <template>
-  <img :src="imageUrl" />
+  <img :src="imageUrl" v-bind:id="headingId"/>
 </template>
 
 
 
 
 <script setup>
-  const imageUrl = new URL('../assets/google.svg', import.meta.url).href
+import { ref } from 'vue';
+
+  const imageUrl = new URL('../assets/google.svg', import.meta.url).href;
+  const headingId = ref('heading')
 </script>
 
 
