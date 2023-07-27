@@ -1,28 +1,38 @@
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-    
-    <Image imagePath="skull3.png" />
-
+    <ImageUrl imagePath="vue.png" v-motion
+      :initial="{ opacity: 0, y: 300 }"
+      :enter="{ opacity: 1, y: 0, scale: 1 }"
+      :variants="{ custom: { scale: 2 } }"
+      :hovered="{ scale: 6.2 }"
+      :delay="200"
+    />
+    <Image imagePath="vue.png" v-motion
+      :initial="{ opacity: 0, y: 300 }"
+      :enter="{ opacity: 1, y: 0, scale: 1 }"
+      :variants="{ custom: { scale: 2 } }"
+      :hovered="{ scale: 6.2 }"
+      :delay="200"
+    />
     <div class="wrapper" v-motion
     :initial="{ opacity: 100, y: 100 }"
     :enter="{ opacity: 1, y: 0, scale: 1 }"
     :variants="{ custom: { scale: 2 } }"
     :hovered="{ scale: 6.2 }"
     :delay="200">
-      <HelloWorld msg="You did it!" />
-     
+      <HelloWorld msg="You did it!" />     
     </div>
   </header>
-  
   <main>
     <TheWelcome />
-   
   </main>
 </template>
 
 <script setup>
 import Image from '@/components/Image.vue'
+import ImageUrl from '@/components/ImageUrl.vue'
+
 
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
